@@ -27,7 +27,7 @@ For example in the following json:
 	
 4. To view all tickets press 2 and 3 to exit
 
-5. Change the <USER_NAME> to the zendesk user name  and  <PASSWORD> in <.env> file in the root path
+5. Change the <USER_NAME> to the zendesk user name  and  <PASSWORD> to zendesk password in <.env> file in the root path
 
 6. Also Change the <ZENDESK_DOMAIN> to the zendesk domain name (Example: https://zcc6839.zendesk.com) 
 
