@@ -31,4 +31,8 @@ For example in the following json:
 
 6. Also Change the <ZENDESK_DOMAIN> to the zendesk domain name (Example: https://zcc6839.zendesk.com) 
 
+7. To Run via Intellij run the file <ZendeskinternApplication.java>
+
+8. Tests are captured in the <AppControllerTest.java>
+
 
