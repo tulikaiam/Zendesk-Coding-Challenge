@@ -17,8 +17,9 @@ public class AppController {
         dotenv = Dotenv.configure().load();
         restTemplate.getInterceptors().add(
                 new BasicAuthorizationInterceptor(dotenv.get("USER_NAME"), dotenv.get("PASSWORD")));
+        String zendesk_domain = dotenv.get("ZENDESK_DOMAIN");
         ResponseEntity<String> response = restTemplate.exchange(
-                "https://zcc6839.zendesk.com/api/v2/tickets/",
+                zendesk_domain+"/api/v2/tickets/",
                 HttpMethod.GET, null, String.class);
         return response;
     }
@@ -28,9 +29,10 @@ public class AppController {
         dotenv = Dotenv.configure().load();
         restTemplate.getInterceptors().add(
                 new BasicAuthorizationInterceptor(dotenv.get("USER_NAME"), dotenv.get("PASSWORD")));
+        String zendesk_domain = dotenv.get("ZENDESK_DOMAIN");
         try {
             ResponseEntity<String> response = restTemplate.exchange(
-                    "https://zcc6839.zendesk.com/api/v2/tickets/" + ticketName,
+                    zendesk_domain+"/api/v2/tickets/" + ticketName,
                     HttpMethod.GET, null, String.class);
             return response;
         } catch (HttpClientErrorException ex) {
