@@ -1,7 +1,7 @@
 # ZenDesk Coding Challenge
 
 ## How to Run
-Run the following command <mvn spring-boot:run> in the root directory
+Run the following command '''mvn spring-boot:run''' in the root directory
 
 ## Overview 
 
